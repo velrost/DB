@@ -2,7 +2,8 @@ REM   Script: create
 REM   creating tables
 
 create table winner( 
-      winner_name varchar(50) not null PRIMARY KEY 
+      winner_name varchar(50) not null PRIMARY KEY,
+      total_wins integer DEFAULT NULL
 );
 
 create table top_scorer( 
@@ -17,4 +18,5 @@ create table season(
       winner_name VARCHAR(50) NOT NULL REFERENCES winner(winner_name), 
       top_scorer_name VARCHAR(50) NOT NULL REFERENCES top_scorer(top_scorer_name) 
 );
+
 
